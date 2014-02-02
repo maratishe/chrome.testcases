@@ -16,7 +16,9 @@ Test data comes from my own photo database. See `07.metromap.js` for the tester 
 
 DUMMY -- you can find it in `serverless.js` simply passes the following data when its `info()` is called:
 
-JSON: `{ S2L: { station: { line1: true, line2: true, ...}, ...}, L2S: { line: { station: next station, ...., last station: null}, ...}}`, where *S2L* means station-to-lines and *L2S* means lines-to-stations. These are used by the layout engine to figure out how to plot it. 
+JSON: `{ S2L: { station to lines hash}, L2S: { line to stations hash}}`
+Each of these should have the following structure: 
+`S2L: { station: { line1: true, line2: true, ...},...}` and `L2S: { line: { station: next station, ...., last station: null}, ...}`.  These are used by the layout engine to figure out how to plot it. 
 
 
 ### LOGs and MISC
